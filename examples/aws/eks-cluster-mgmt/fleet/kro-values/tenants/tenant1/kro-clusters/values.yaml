@@ -1,17 +1,16 @@
 clusters:
-#New cluster
-  # workload-cluster1:
-  #   managementAccountId: "XXXXXX"
-  #   accountId: "XXXXXX"
-  #   tenant: "tenant1"
-  #   k8sVersion: "1.31"
-  #   vpc:
-  #     create: true
-  #   gitops:
-  #     addonsRepoUrl: "https://github.com/XXXXXX/eks-cluster-mgmt"
-  #     fleetRepoUrl: "https://github.com/XXXXXX/eks-cluster-mgmt"
-  #     platformRepoUrl: "https://github.com/XXXXXX/eks-cluster-mgmt"
-  #     workloadRepoUrl: "https://github.com/XXXXXX/eks-cluster-mgmt"
+  workload-cluster1:
+    managementAccountId: ""
+    accountId: ""
+    tenant: "tenant1"
+    k8sVersion: "1.35.3"
+    vpc:
+      create: true
+    gitops:
+      addonsRepoUrl: "https://github.com/amediomediagroup/kro"
+      fleetRepoUrl: "https://github.com/amediomediagroup/kro"
+      platformRepoUrl: "https://github.com/amediomediagroup/kro"
+      workloadRepoUrl: "https://github.com/amediomediagroup/kro"
 
   # workload-cluster2:
   #   managementAccountId: "XXXXXX"
