@@ -34,7 +34,7 @@ argocd:
   chartName: argo-cd
   namespace: argocd
   releaseName: argocd
-  defaultVersion: "9.2.4"
+  defaultVersion: "7.9.1"
   chartRepository: "https://argoproj.github.io/argo-helm"
   selector:
     matchExpressions:
