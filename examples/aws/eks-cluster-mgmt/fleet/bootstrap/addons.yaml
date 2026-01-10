@@ -33,16 +33,10 @@ spec:
         helm:
           ignoreMissingValueFiles: true
           valueFiles:
-          valueFiles:
-        # Dùng một dòng duy nhất để tránh lỗi render chuỗi
-            - $values/examples/aws/eks-cluster-mgmt/addons/bootstrap/default/addons.yaml
-            - $values/examples/aws/eks-cluster-mgmt/addons/environments/{{ .metadata.labels.environment }}/addons.yaml
-            - $values/examples/aws/eks-cluster-mgmt/addons/tenants/{{ .metadata.labels.tenant }}/default/{{ .values.addonChart }}/addons.yaml
-            - $values/examples/aws/eks-cluster-mgmt/addons/tenants/{{ .metadata.labels.tenant }}/clusters/{{ .name }}/{{ .values.addonChart }}/addons.yaml
-            # - $values/{{.metadata.annotations.addons_repo_basepath}}bootstrap/default/addons.yaml
-            # - $values/{{.metadata.annotations.addons_repo_basepath}}environments/{{ .metadata.labels.environment }}/addons.yaml
-            # - $values/{{.metadata.annotations.addons_repo_basepath}}tenants/{{ .metadata.labels.tenant }}/default/{{ .values.addonChart }}/addons.yaml
-            # - $values/{{.metadata.annotations.addons_repo_basepath}}tenants/{{ .metadata.labels.tenant }}/clusters/{{ .name }}/{{.values.addonChart}}/addons.yaml
+            - $values/{{.metadata.annotations.addons_repo_basepath}}bootstrap/default/addons.yaml
+            - $values/{{.metadata.annotations.addons_repo_basepath}}environments/{{ .metadata.labels.environment }}/addons.yaml
+            - $values/{{.metadata.annotations.addons_repo_basepath}}tenants/{{ .metadata.labels.tenant }}/default/{{ .values.addonChart }}/addons.yaml
+            - $values/{{.metadata.annotations.addons_repo_basepath}}tenants/{{ .metadata.labels.tenant }}/clusters/{{ .name }}/{{.values.addonChart}}/addons.yaml
       destination:
         namespace: argocd
         name: '{{.name}}'
